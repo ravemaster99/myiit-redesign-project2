@@ -3,30 +3,35 @@
 		<meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="css/screen.css">
-		<title>Login Page
-    </title>
+    <script src="js/site.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <title>Login Page</title>
   </head>
   <body>
     <section id="loginMenu">
-      <h3>myIIT Login </h3>
+      <h3>MyIIT Login </h3>
       <form>
       	<select name="url" onchange="menu(this.form)" id="loginDropdown">
-          <option value="">Login</option>
+          <option value="">Menu</option>
           <option value="http://iit.edu/news/iittoday/">News</option>
           <option value="http://web.iit.edu/directory/social-media">Social Media</option>
           <option value="http://support.iit.edu/">Help</option>
           <option value="https://pws.iit.edu/hr/policies-and-procedures-manual">Policies</option>
         </select>
       </form>
+      <figure id="iitlogo">
+        <img src="img/iitlogo.png" alt="iit logo"/>
+      </figure>
     </section>
     <section id="loginNavbar">
       <form method="POST" onsubmit="return login(this)">
         <fieldset class="boxed"> 
         	<legend>Login </legend>
-            <p>Username:</p>
-            <input name="username" placeholder="IIT ID Name" type="text">
-            <p>Password:</p>
-            <input name="pwd" placeholder="Password" type="password"> 
+            <label>Username:</label>
+            <input name="username" placeholder="IIT ID Name" type="text" value="dwong">
+            <label>Password:</label>
+            <input name="pwd" placeholder="Password" type="password" value="JohnCheese"> 
             <input value="Login" type="submit">
         </fieldset>
       </form>
@@ -34,7 +39,5 @@
     <section id="loginContent">
       <a href="http://support.iit.edu" target="_blank">Can't log in?</a>
     </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/site.js"></script>
 	</body>
 </html>
